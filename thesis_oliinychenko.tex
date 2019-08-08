@@ -1,0 +1,72 @@
+%% For normal draft builds (figs undisplayed hence fast compile)
+%\documentclass[hyperpdf,bindnopdf,oneside,draft]{hepthesis}
+
+%% For short draft builds (breaks citations by necessity)
+%\documentclass[hyperpdf,bindnopdf,oneside,draft,hidefrontback]{hepthesis}
+
+
+\documentclass[hyperpdf,bindnopdf,oneside]{hepthesis}
+
+%% Load special font packages here if you wish
+%\usepackage{lmodern}
+\usepackage{mathpazo}
+%\usepackage{euler}
+
+%% Put package includes etc. into preamble.tex for convenience
+\input{text/preamble}
+
+%% You can set the line spacing this way
+%\setallspacing{double}
+%% or a section at a time like this
+%\setfrontmatterspacing{double}
+\setmainmatterspacing{onehalf}
+
+
+%% Define the thesis title and author
+\title{Interfaces between relativistic hydrodynamics and transport for the dynamical description of heavy ion collisions}
+\author{Dmytro Oliinychenko}
+
+%% Doc-specific PDF metadata
+\makeatletter
+\@ifpackageloaded{hyperref}{%
+\hypersetup{%
+  pdftitle = {Interfaces between relativistic hydrodynamics and transport for the dynamical description of heavy ion collisions},
+  pdfsubject = {Dmytro Oliinychenko's PhD thesis},
+  pdfkeywords = {Hadron transport, heavy ion collisions, physics, thermalization},
+  pdfauthor = {\textcopyright\ Dmytro Oliinychenko}
+}}{}
+\makeatother
+
+
+%% Start the document
+\begin{document}
+
+%% Define the un-numbered front matter (cover pages, rubrik and table of contents)
+\begin{frontmatter}
+  \input{text/frontmatter}
+\end{frontmatter}
+
+%% Start the content body of the thesis
+\begin{mainmatter}
+  \input{text/c1_intro}
+  \input{text/c2_interfaces}
+  \input{text/c3_local_equilibration_in_transport}
+  \input{text/c4_cf_negative_contributions}
+  \input{text/c5_smash_transport_approach}
+  \input{text/c6_forced_canonical_thermalization}
+  \input{text/c7_summary}
+\end{mainmatter}
+
+%% Produce the appendices
+\begin{appendices}
+  \input{text/appendices}
+\end{appendices}
+
+%% Produce the un-numbered back matter (e.g. colophon,
+%% bibliography, tables of figures etc., index...)
+\begin{backmatter}
+  \input{text/backmatter}
+\end{backmatter}
+
+%% Close
+\end{document}

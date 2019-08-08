@@ -1,0 +1,99 @@
+\usepackage{xspace}
+\usepackage{tikz}
+\usepackage{morefloats,subfig,afterpage}
+\usepackage{mathrsfs} % script font
+\usepackage{verbatim}
+\usepackage{amssymb}
+
+%% Using Babel allows other languages to be used and mixed-in easily
+\usepackage[ngerman,english]{babel}
+\selectlanguage{english}
+
+%% Citation system tweaks
+\usepackage{cite}
+% \let\@OldCite\cite
+% \renewcommand{\cite}[1]{\mbox{\!\!\!\@OldCite{#1}}}
+
+%% Maths
+% TODO: rework or eliminate maybemath
+\usepackage{abmath}
+\DeclareRobustCommand{\parenths}[1]{\left({#1}\right)\xspace}
+\DeclareRobustCommand{\braces}[1]{\left\{{#1}\right\}\xspace}
+\DeclareRobustCommand{\angles}[1]{\left\langle{#1}\right\rangle\xspace}
+\DeclareRobustCommand{\sqbracs}[1]{\left[{#1}\right]\xspace}
+\DeclareRobustCommand{\mods}[1]{\left\lvert{#1}\right\rvert\xspace}
+\DeclareRobustCommand{\modsq}[1]{\mods{#1}^2\xspace}
+\DeclareRobustCommand{\dblmods}[1]{\left\lVert{#1}\right\rVert\xspace}
+\DeclareRobustCommand{\expOf}[1]{\exp{\!\parenths{#1}}\xspace}
+\DeclareRobustCommand{\eexp}[1]{e^{#1}\xspace}
+\DeclareRobustCommand{\plusquad}{\oplus\xspace}
+\DeclareRobustCommand{\logOf}[1]{\log\!\parenths{#1}\xspace}
+\DeclareRobustCommand{\lnOf}[1]{\ln\!\parenths{#1}\xspace}
+\DeclareRobustCommand{\ofOrder}[1]{\mathcal{O}\parenths{#1}\xspace}
+\DeclareRobustCommand{\SOgroup}[1]{\mathrm{SO}\parenths{#1}\xspace}
+\DeclareRobustCommand{\SUgroup}[1]{\mathrm{SU}\parenths{#1}\xspace}
+\DeclareRobustCommand{\Ugroup}[1]{\mathrm{U}\parenths{#1}\xspace}
+\DeclareRobustCommand{\I}[1]{\mathrm{i}\xspace}
+\DeclareRobustCommand{\colvector}[1]{\begin{pmatrix}#1\end{pmatrix}\xspace}
+\DeclareRobustCommand{\Re}[1]{\operatorname{Re}(#1)}
+\DeclareRobustCommand{\Im}[1]{\operatorname{Im}(#1)}
+
+%% High-energy physics stuff
+\usepackage{abhep}
+\usepackage{hepnames}
+\usepackage{hepunits}
+
+\DeclareRobustCommand{\Elab}{E_\mathrm{lab}}
+\DeclareRobustCommand{\Tmn}{T^{\mu\nu}}
+\DeclareRobustCommand{\jmu}{j^{\mu}}
+\DeclareRobustCommand{\U}{\mathrm{U}}
+\DeclareRobustCommand{\Ntest}{N_{\textrm test}}
+
+\DeclareRobustCommand{\arXivCode}[1]{arXiv:#1}
+\DeclareRobustCommand{\CP}{\ensuremath{\mathcal{CP}}\xspace}
+\DeclareRobustCommand{\CPviolation}{\CP-violation\xspace}
+\DeclareRobustCommand{\CPv}{\CPviolation}
+\DeclareRobustCommand{\LHCb}{LHCb\xspace}
+\DeclareRobustCommand{\LHC}{LHC\xspace}
+\DeclareRobustCommand{\LEP}{LEP\xspace}
+\DeclareRobustCommand{\CERN}{CERN\xspace}
+\DeclareRobustCommand{\bphysics}{\Pbottom-physics\xspace}
+\DeclareRobustCommand{\bhadron}{\Pbottom-hadron\xspace}
+\DeclareRobustCommand{\Bmeson}{\PB-meson\xspace}
+\DeclareRobustCommand{\bbaryon}{\Pbottom-baryon\xspace}
+\DeclareRobustCommand{\Bdecay}{\PB-decay\xspace}
+\DeclareRobustCommand{\bdecay}{\Pbottom-decay\xspace}
+\DeclareRobustCommand{\BToKPi}{\HepProcess{ \PB \to \PK \Ppi }\xspace}
+\DeclareRobustCommand{\BToPiPi}{\HepProcess{ \PB \to \Ppi \Ppi }\xspace}
+\DeclareRobustCommand{\BToKK}{\HepProcess{ \PB \to \PK \PK }\xspace}
+\DeclareRobustCommand{\BToRhoPi}{\HepProcess{ \PB \to \Prho \Ppi }\xspace}
+\DeclareRobustCommand{\BToRhoRho}{\HepProcess{ \PB \to \Prho \Prho }\xspace}
+\DeclareRobustCommand{\X}{\thesismath{X}\xspace}
+\DeclareRobustCommand{\Xbar}{\thesismath{\overline{X}}\xspace}
+\DeclareRobustCommand{\Xzero}{\HepGenParticle{X}{}{0}\xspace}
+\DeclareRobustCommand{\Xzerobar}{\HepGenAntiParticle{X}{}{0}\xspace}
+\DeclareRobustCommand{\epluseminus}{\Ppositron\!\Pelectron\xspace}
+\DeclareRobustCommand{\protonproton}{\Pproton\APantiproton\xspace}
+
+
+\usepackage{etoolbox}
+\newcommand{\zerodisplayskips}{%
+  \setlength{\abovedisplayskip}{-5pt}%
+  \setlength{\belowdisplayskip}{5pt}%
+  \setlength{\abovedisplayshortskip}{-5pt}%
+  \setlength{\belowdisplayshortskip}{5pt}}
+\appto{\normalsize}{\zerodisplayskips}
+\appto{\small}{\zerodisplayskips}
+\appto{\footnotesize}{\zerodisplayskips}
+
+\usepackage{enumitem}
+\setlist[1]{itemsep=0pt}
+
+\usepackage{titlesec}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\usepackage{array}
+\usepackage{pbox}
+

@@ -1,0 +1,223 @@
+\thispagestyle{empty}%
+\begin{center}%
+  \vspace*{\frontmattertitleskip}%
+  \begin{doublespace}%
+    {\Huge\textbf{\thetitle}}\\%
+  \end{doublespace}%
+  \vspace*{2cm}%
+  \Large{{Dissertation \\
+          zur Erlangung des Doktorgrades \\
+          der Naturwissenschaften} }\\%
+  \vspace*{2cm}%
+  \Large{{vorgelegt beim Fachbereich Physik \\
+         der Johann Wolfgang Goethe-Universit\"at \\
+         in Frankfurt am Main} }\\%
+  \vspace*{1cm}%
+  \Large{{von {\theauthor} \\ aus Dnepropetrowsk} }\\
+  \vspace*{1cm}%
+  \Large{{Frankfurt 2017 \\ (D30)}}
+\end{center}%
+
+\newpage
+\thispagestyle{empty}%
+\vspace*{0.4\textheight}
+\noindent
+{vom Fachbereich Physik (13) der \\
+Johann Wolfgang Goethe-Universit\"at als Dissertation angenommen.}\\
+\vspace{5cm} \\
+{Dekan:  Prof. Owe Philipsen\\
+ Gutachter:  Prof. Hannah Petersen, Prof. Marcus Bleicher\\
+ Datum der Disputation: }
+
+%% Abstract
+\newpage
+\begin{abstract}[Zusammenfassung]%[\smaller \thetitle\\ \vspace*{1cm} \smaller {\theauthor}]
+  %\thispagestyle{empty}
+  Diese Arbeit basiert auf folgenden Publikationen:
+  \begin{itemize}
+    \item ``Systematic Investigation of Negative Cooper-Frye Contributions in Heavy Ion Collisions Using Coarse-grained Molecular Dynamics''~\cite{Oliinychenko:2014tqa}
+    \item ``Cooper-Frye Negative Contributions in a Coarse-Grained Transport Approach''~\cite{Oliinychenko:2014ava}
+    \item ``Deviations of the Energy-Momentum Tensor from Equilibrium in the Initial State for Hydrodynamics from Transport Approaches'' \cite{Oliinychenko:2015lva}
+    \item ``Influence of kinematic cuts on the net charge distribution''~ \cite{Petersen:2015pcy}
+    \item ``Particle production and equilibrium properties within a new hadron transport approach for heavy-ion collisions''~\cite{Weil:2016zrk}
+    \item ``Forced canonical thermalization in a hadronic transport approach at high density''~\cite{Oliinychenko:2016vkg}
+    \item ``Effective dynamical coupling of hydrodynamics and transport for heavy-ion collisions''~\cite{Oliinychenko:2017qct}
+  \end{itemize}
+
+%\section{Einf\"uhrung}
+\selectlanguage{ngerman}
+
+Die Dichte des Atomkerns ist f\"ur alle Kerne ann\"ahernd gleich und betr\"agt rund
+$\rho_0 = 0.16$ fm$^{-3} = $ 2.7 $\cdot 10^{17}$ $\frac{\mathrm{kg}}{\mathrm{m}^3}$.
+Unsere normale Raumtemperatur ist im Vergleich zu
+nuklearen Energieniveaus so klein, dass man sie f\"ur Atomkerne als ann\"ahernd Null
+betrachten kann. Es gibt allerdings Orte im Universum, an denen sich Kernmaterie in
+einem extremen Zustand befindet. Zum Beispiel kann die Dichte beim Kollaps von Typ II
+Supernovae bis zu $4\rho_0$ betragen, im Zentrum von Neutronensterne sogar bis zu
+$9\rho_0$ und wenige Mikrosekunden nach dem Urknall war die
+Materie nicht nur extrem dicht, die Temperatur war auch h\"oher als $10^{12}$ K.
+In den 1970er Jahre wurde theoretisch vorhergesagt, dass bei solchen Temperaturen
+und Dichten die gew\"ohnlichen Protonen und Neutronen nicht mehr existieren k\"onnen.
+Ein neuer Zustand der Materie werde erzeugt, das sogenannte Quark-Gluon-Plasma
+(QGP).
+
+Das QGP kann man experimentell in hoch-energetischen Kollisionen von schweren Ionen
+untersuchen, was manchmal ``Urknall im Labor'' genannt wird. Eine Reihe von
+Experimenten an Ionenbeschleunigeranlagen sind der Erforschung der QGP-Physik und der
+Materie bei extremen Dichten und Temperaturen gewidmet. Diese
+Beschleuniger sind der RHIC (Relativistic Heavy Ion Collider) in Brookhaven bei New
+York, der LHC (Large Hadron Collider) in Genf, sowie auch die zuk\"unftige
+Beschleunigeranlagen FAIR (Facility for Antiproton and Ion Research) an der GSI
+(Gesellschaft f\"ur Schwerionenforschung) in Darmstadt, NICA (Nuclotron-based Ion
+Collider fAcility) in Dubna (Russland) und JPARK-HI in Japan. Dort werden verschiedene
+Ionen auf ultrarelativistische Energien beschleunigt und zur Kollision gebracht. Die
+Ergebnisse dieser Kollisionen erlauben es, die Eigenschaften der stark wechselwirkenden
+Materie zu erforschen. Eine der wichtigsten Fragen der Schwerionenforschung heutzutage
+ist, ob es einen Phasen\"ubergang zwischen hadronischer Materie und QGP gibt und falls
+ja, bei welcher Temperatur und Dichte dieser erfolgt. Wenn es einen Phasen\"ubergang
+gibt, stellt sich auch die Frage, welcher Ordnung er ist und wo der kritische Punkt
+liegt. Durch Variation der Kollisionsenergie kann man verschiedene Punkte des
+Phasendiagramms erreichen. Man erwartet, dass der kritische Punkt bei mittleren
+Energien, $\Elab \simeq 20$--200~\emph{A}~GeV, beobachtet werden kann. Die
+zuk\"unftigen Experimente, und auch das Beam Energy Scan Program am RHIC, arbeiten in
+diesem Energiebereich, um den kritischen Punkt zu untersuchen. Das macht die
+detaillierte Simulation von Schwerionenkollisionen bei mittleren Energien aktuell und
+interessant.
+
+Heutzutage gibt es zwei Arten von dynamischen mikroskopischen Modellen zur
+Beschreibung von Schwerionenkollisionen: Relativistische Hydrodynamik und
+Transportsimulationen. Modelle, die Hydrodynamik und Transporttheorie in ihrem
+jeweiligen Anwendungsbereich verbinden, werden als Hybrid-Modelle bezeichnet.
+Hydrodynamik beschreibt experimentelle Observablen besonders gut bei hohen 
+Kollisionsenergien. Ein lokales thermodynamisches Gleichgewicht, welches notwendig
+f\"ur die Anwendbarkeit relativistischer Hydrodynamik ist, wird bei hoher Energie
+schnell erreicht und lange erhalten. Das System ist gro{\ss} und dicht genug, sodass
+die mittlere freie Wegl\"ange viel kleiner als die Systemgr\"o{\ss}e ist und f\"ur eine
+erhebliche Zeit erhalten bleibt. Im Gegensatz dazu ist hadronischer Transport bei
+kleinen Energien anwendbar, kalibriert und relativ gut verstanden. Welche Methode kann
+man f\"ur die mittlere Energie w\"ahlen? Sind die typische N\"aherungen und Vermutungen
+der Hybrid-Modelle noch g\"ultig im mittleren Energiebereich? Diese N\"aherungen werden
+in dieser Arbeit untersucht und beurteilt. Zus\"atzlich wird eine neue
+Simulationsmethode vorgestellt, die es erlaubt, manche Annahmen wegzulassen.
+
+Eine wichtige Annahme von Hybrid-Modellen ist eine schnelle lokale Thermalisierung
+im gesamten Volumen der Reaktion. Bei hoher Energie ist die schnelle Ann\"aherung zum
+thermischen Gleichgewicht gut erforscht und begr\"undet (obwohl die Diskussion
+dar\"uber, welcher Thermalisierung-Mechanismus dominiert, noch sehr aktiv ist). Bei
+mittleren Energien ist die Ann\"aherung zum Gleichgewicht weniger gut erforscht.
+Allerdings ist die N\"ahe zum lokalen thermischen Gleichgewicht eine notwendige
+Bedingung f\"ur die Anwendbarkeit von Hydrodynamik. Ist das Gleichgewicht bei mittleren
+Energien \"uberhaupt erreicht? Wenn ja, wie schnell? Auf diese Fragen wird hier
+mit Hilfe eines Transport-Modells UrQMD (Ultra-relativistic Quantum Molecular Dynamics)
+sowie des sogenannten ``coarse-graining''-Verfahrens eingegangen. Hierf\"ur wird der
+Energie-Impuls-Tensor $\Tmn$ f\"ur jeden Punkt des kartesischen Gitters bestimmt, das
+sich \"uber das ganze System erstreckt. Mittels $\Tmn$ wird die Abweichung vom
+Gleichgewicht bestimmt. Der wichtigste Beitrag zum Ungleichgewicht ist die Anisotropie
+von $\Tmn$. Das Gleichgewicht wird nie im gesamten System erreicht, jedoch ist ab einer
+bestimmten Zeit $t_{iso}(\Elab, b, \sigma)$ ein ausreichendes Volumen genug
+isotropisiert, um Hydrodynamik anwenden zu k\"onnen. Dabei ist $\Elab$ die kinetische
+Energie des Projektils pro Nukleon, $b$ der Sto{\ss}parameter, der die Zentralit\"at
+der Kollision charakterisiert, und $\sigma$ ist ein Ausschmierung-Parameter des
+coarse-graining-Verfahrens. Die gefundene Abh\"angigkeit (f\"ur eine Vielzahl der
+Transport-Simulationen, ermittelt im coarse-graining-Verfahren) l\"asst sich
+n\"aherungsweise mit der folgenden Formel beschreiben: $t_{iso} =
+2R(\Elab/2m_N)^{-1/2} +\alpha \sigma$.
+
+Hybrid-Modelle verwenden Hydrodynamik im Bereich hoher Dichten und Transport-
+Simulationen im Bereich niedriger Dichten. Der \"Ubergang zwischen diesen zwei
+Verfahren beruht auf bestimmten N\"aherungen und Annahmen. Man vermutet, dass dieser
+\"Ubergang sehr schnell ist und auf einer Hyperfl\"ache erfolgt. Die hydrodynamischen
+Gleichungen werden
+im ganzen Vorw\"artslichtkegel gel\"ost und die Hyperfl\"ache wird
+nur aus der Hydrodynamik aposteriori bestimmt, nicht dynamisch aus kombinierten
+Hydrodynamik und Transporttheorie Gleichungen. Die Teilchen werden aus der
+Hydrodynamik gem\"a{\ss} der Cooper-Frye-Formel produziert und anschlie{\ss}end im
+Rahmen der Transporttheorie beschrieben. Sie k\"onnen nicht in den hydrodynamischen
+Bereich zur\"uckkehren und r\"ucksto{\ss}en. Diese N\"aherungen f\"uhren zu negativen
+Beitr\"agen der Cooper-Frye-Formel. Bei hohen Energien sind diese Beitr\"age
+vernachl\"assigbar, aber bei mittleren Energien wurden sie nie systematisch untersucht.
+In dieser Arbeit werden die negative Cooper-Frye-Beitr\"age in Gold-Gold Kollisionen bei
+$\Elab = 5$--$160$ \emph{A} GeV f\"ur verschiedene Hadronen in verschiedenen
+kinematischen Regionen mithilfe des ``coarse-grained'' Transport-Modells UrQMD bestimmt.
+Diese Rechnung nimmt ein thermisches Gleichgewicht auf der Hyperfl\"ache
+an. Die gr\"o{\ss}ten negative Beitr\"age liegen f\"ur Pionen bei mittlerer Rapidit\"at
+vor und machen nicht mehr als 15\% aus. In Transport-Modellen kann man auch explizit
+die Teilchen z\"ahlen, welche die Hyperfl\"ache von au{\ss}en nach innen \"uberqueren
+--- das entspricht  den negativen Cooper-Frye-Beitr\"agen ohne Annahme eines
+Gleichgewichts. In dieser Arbeit wird gezeigt, dass diese negativen Beitr\"age im
+Nichtgleichgewicht erheblich kleiner sind als im Gleichgewicht.
+
+Die negativen Cooper-Frye-Beitr\"age vermeidet man in einem neuen Modell, das in dieser
+Arbeit konstruiert wird. In gew\"ohnlichen Transport-Modellen im Bereich hoher Dichten
+wird eine Thermalisierung k\"unstlich erzwungen, was intensiven Mehr-Teilchen-
+Kollisionen oder der Bildung des Quark-Gluon-Plasmas entspricht. Dieses Verfahren wurde
+mit dem Transport-Modell SMASH implementiert und getestet. Drei Algorithmen der
+Thermalisierung wurden verglichen und der neuentwickelte ``biased Becattini-Ferroni''
+Algorithmus erwies sich als ausreichend zuverl\"assig und effizient. In einem
+kontrollierten Szenario einer expandierenden Kugel wurde gezeigt, dass SMASH mit
+erzwungener Thermalisierung die Expansionsgeschwindigkeit und die Energiedichte zwischen
+Hydrodynamik und Transporttheorie aufweist. Bei der Simulation von Schwerionenkollisionen mit
+diesem Modell wurden folgende Beobachtungen gemacht: im Vergleich zum Transport wird
+mehr Seltsamkeit erzeugt, der mittlere transversale Impuls wird aufgrund der
+Druckisotropisierung erh\"oht und Bereiche hoher Dichten leben l\"anger. Alle diese
+Merkmale sind den Hybrid-Modellen \"ahnlich, aber ohne die oben genannten Nachteile.
+Insgesamt f\"uhrt die erzwungene Thermalisierung zu den erwarteten Ergebnissen.
+
+Im Rahmen dieser Doktorarbeit wurde auch ein erheblicher Beitrag zur Enwicklung des
+SMASH-Modells selbst geleistet, inbesonders was Nukleon-Nukleon-Potentiale,
+Fermi-Bewegung, Pauli-Blockierung, Thermodynamik und Detaillierte Balance betrifft. 
+Das relativistische Transport-Modell SMASH ist f\"ur Simulationen der Kollisionen von
+Ionen, Protonen oder anderen Hadronen geeignet. Ein gesamter Kollisionsprozess wird als
+eine Sequenz von elementaren $2 \to 2$ Kollisionen, Zerf\"allen, Resonanz-Bildungen
+und Teilchen-Propagation simuliert. Die Potentiale beeinflussen die Trajektorien der
+Teilchen w\"ahrend der Propagation und sind f\"ur Schwerionenkollisionen niedriger
+Energien (z.B. f\"ur Simulationen des FOPI Experiments an der GSI in Darmstadt)
+besonders wichtig. Bei solchen Energien ist es auch wichtig die Quanteneffekte f\"ur
+Fermionen, die Pauli-Blockierung und Fermi-Bewegung in einem Atomkern zu
+ber\"ucksichtigen. Zus\"atzlich zu diesen Effekten wurde das oben genannte ``coarse-
+graining''-Verfahren in SMASH implementiert. Das hat die oben beschriebenen
+Simulationen mit erzwungener Thermalisierung erm\"oglicht.
+
+Zusammengefasst lauten die wichtigsten Resultate dieser Arbeit:
+\begin{itemize}
+  \item Entwicklung eines neuen Modells mit erzwungener Thermalisierung im Bereich
+        hoher Dichten. Diese Thermalisierung entspricht intensiven Mehr-Teilchen-
+        Kollisionen oder der Bildung des Quark-Gluon-Plasmas.
+  \item Systematische Beurteilung der negativen Cooper-Frye-Beitr\"age in
+        Schwerionenkollisionen im Energiebereich $\Elab = 5$--$160$ \emph{A} GeV.
+        Die negativen Cooper-Frye Beitr\"age limitieren die Pr\"azision der 
+        Hybrid-Modelle in diesem Bereich.
+  \item Analyse der lokalen Thermalisierungsgrade in Schwerionenkollisionen im
+        Energiebereich $\Elab = 5$--$160$ \emph{A} GeV.
+  \item Erheblicher Beitrag zu der Entwicklung des Transport-Modells SMASH.
+\end{itemize}
+
+% Das SMASH-Modell wird in der Arbeit ausf\"uhrlich beschrieben.
+
+\selectlanguage{english}
+
+\end{abstract}
+
+
+%% Declaration
+%\begin{declaration}
+%  This dissertation is the result of my own work, except where explicit
+%  reference is made to the work of others, and has not been submitted
+%  for another qualification to this or any other university. This
+%  dissertation does not exceed the word limit for the respective Degree
+%  Committee.
+%  \vspace*{1cm}
+%  \begin{flushright}
+%    Dmytro Oliinychenko
+%  \end{flushright}
+%\end{declaration}
+
+
+%% ToC
+\tableofcontents
+
+
+%%
+% \frontquote{<quote>}{<author>}%
+%% I don't want a page number on the following blank page either.
+\thispagestyle{empty}

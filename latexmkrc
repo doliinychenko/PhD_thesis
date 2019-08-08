@@ -1,0 +1,1 @@
+$ENV{'TEXINPUTS'}='./latex_packages//:' . $ENV{'TEXINPUTS'};

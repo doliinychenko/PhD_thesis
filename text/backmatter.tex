@@ -1,0 +1,264 @@
+%% Acknowledgements
+\begin{acknowledgements}
+
+  First of all I would like to thank Hannah Petersen for the brilliant
+supervision, for being always kind, optimistic and full of ideas, for
+motivating me, for interesting discussions and for the help in all sorts of
+weird situations one can get into, while doing PhD abroad.
+
+This work has inherited many ideas developed by Kyrill Bugaev and by Pasi
+Huovinen.  I would like to thank them for that, as well as for insightful
+discussions and critical questions. I would also like to thank Pasi for
+providing the Cornelius code for hypersurface finding. The thesis is influenced
+by the excellent lectures in heavy ion physics by Elena Bratkovskaya and Igor
+Mishustin that I attended in the Institute of Theoretical Physics.  Discussions
+during common lunches with Harri Niemi, Etele Molnar, LongGang Pang, Pasi
+Huovinen, Daisuke Satow, Shi Pu and many others were illuminating and certainly
+contributed to my understanding of heavy ion collisions.
+
+Helmholtz Graduate School has supported my PhD studies, providing
+the travel money and excellent lectures. I would like to thank Henner B\"usching
+and Sascha Vogel, who organized these lectures and motivated us to visit them.
+Due to the requirement of Helmholtz Graduate School to have a PhD committee I
+had a chance to discuss my work with Christian Sturm - he helped me not to lose
+the big picture behind technical details.
+
+I would like to acknowledge funding by a Helmholtz Young Investigator
+Group VH-NG-822 from the Helmholtz Association and GSI.
+
+For two years my PhD studies were supported by the stipend from Deutsche Telekom
+Stiftung. At the get-togethers of Deutsche Telekom Stiftung stipendiats I was
+introduced to a world of socially active students from natural sciences that changed my
+mentality. I would like to thank all fellow stipendiats for that, especially Arzu
+Yilmas, Niklas M\"uller and Isabel M\"uller.  The help and support of Christiane
+Frense-Heck, who is at the heart of organizational activities, cannot be overestimated.
+
+It was exciting to be a part of the SMASH developers group. I want to thank all
+its members for a great collaboration. Besides co-developing SMASH, many have
+contributed to this thesis in different ways. Thanks to Matthias Kretz I have
+learned a lot about modern C++ programming.  Vinzent Steinberg and LongGang Pang
+were always willing to discuss scientific and technical issues, their support
+helped me to avoid and correct many errors. I would like to thank Harri Niemi for
+his critical comments on the thesis, Anna Sch\"afer, Alba Ontoso and Sangwook Ryu for
+proof-reading different parts of the the thesis and Juan Torres-Rincon for correcting
+typos in formulas. Markus Mayer and Vinzent Steinberg have corrected my German in the
+summary (Zusammenfassung).
+
+Significant part of the computations for this thesis was performed on the
+LOEWE-CSC computing cluster, which can be praised for its reliability and
+impressive computational power.
+
+Finally, I would like to thank my parents, who always cared and worried that
+the author of this thesis is alive, healthy, fit, and has a good mood for some
+scientific research.
+
+
+\end{acknowledgements}
+
+%% You're recommended to use the eprint-aware biblio styles which
+%% can be obtained from e.g. www.arxiv.org. The file mythesis.bib
+%% is derived from the source using the SPIRES Bibtex service.
+\bibliographystyle{IEEEtran}
+\bibliography{inspire,non_inspire}
+
+%% I prefer to put these tables here rather than making the
+%% front matter seemingly interminable. No-one cares, anyway!
+%\listoffigures
+%\listoftables
+
+%% If you have time and interest to generate a (decent) index,
+%% then you've clearly spent more time on the write-up than the
+%% research ;-)
+%\printindex
+
+\begin{lebenslauf}
+
+\begin{tabular}{ll}
+\textbf{Name:}           & Dmytro Oliinychenko \\
+\textbf{Adresse:}        & Augustenburgstr. 6, 60488 Frankfurt am Main \\
+\textbf{Geburtsdatum:}   & 8. November 1990 \\
+\textbf{Geburtsort:}     & Dnepropetrovsk, Ukraine \\
+\textbf{Nationalit\"at:} & ukrainisch \\
+\textbf{Familienstand:}  & ledig \\
+\end{tabular}
+
+\vspace{0.5cm}
+{\Large \textbf{Ausbildung}} \\
+
+\begin{tabular}{m{4cm}l}
+9/1997 - 7/2004  & Rivne State Classical Gymnasium \\
+9/2004 - 7/2007  & Lyceum at Kiev National University \\
+9/2007 - 7/2013  & Moscow Institute for Physics and Technology \\
+\end{tabular}
+
+\begin{itemize}[leftmargin=2.5cm,label=$-$]
+  \item B. S. in Physik, Summa Cum Laude \\
+        {\small \textit{Undergraduate Thesis: ''Description of particle multiplicities
+         in heavy ion collisions data using thermal model with hard-core potential
+         including Lorentz contraction''}}
+  \item M. S. in Physik, Summa Cum Laude \\
+        {\small \textit{Graduate Thesis: ''Investigation of Multiplicities in Heavy Ion
+        Collisions''}}
+\end{itemize}
+
+\begin{tabular}{m{4cm}l}
+seit 10/2013 & Doktorand in Physik an der J.W.-Goethe Universit\"at Frankfurt
+\end{tabular}
+
+\vspace{0.5cm}
+{\Large \textbf{Stipendien und Auszeichnungen}} \\
+
+\begin{tabular}{m{3cm}m{13cm}}
+2006  & Zweiter Preis in der Ukrainischen Physik Olympiade (Nationalniveau) \\
+2007  & Stipendium des Presidenten der Ukraine f\"ur Gewinner der Schulolympiaden \\
+2010, 2012, 2013  & Gewinner/''Best reporter'' des Internationalen Physiker-Turniers \\ % sieh iptnet.info
+2008 - 2013 & Stipendium des Dekanats f\"ur ausgezeichnete Pr\"ufungsleistung \\
+2012 - 2013 & Stipendium vom D. Zimin ''Dynasty''-Stiftung f\"ur junge Forscher \\
+2013        & M. M. Bogoliubov Stipendium f\"ur junge Forscher vom JINR, Dubna \\
+2015        & Giersch Excellence Award \\
+2015 - 2016 & Stipendium der Deutsche Telekom Stiftung  \\
+\end{tabular}
+
+\newpage
+
+{\Large \textbf{Ver\"offentlichungen}} \\
+
+\textbf{In referierten Zeitschriften}
+
+\begin{enumerate}
+    \item A.~I.~Ivanytsky \textit{et al.},
+          \emph{Physical properties of Polyakov loop geometrical clusters in SU(2)
+                gluodynamics},
+          Nucl.\ Phys.\ A \textbf{ 960}, 90-113 (2017).
+    \item D.~Oliinychenko and H.~Petersen,
+          \emph{Forced canonical thermalization in a hadronic transport approach at high
+                density},
+          J.\ Phys.\ G \textbf{ 44}, no. 3, 034001 (2017).            
+    \item K.~A.~Bugaev \textit{et al.},
+          \emph{Separate chemical freeze-outs of strange and non-strange hadrons and problem of
+                residual chemical
+                non-equilibrium of strangeness in relativistic heavy ion collisions},
+          Ukr.\ J.\ Phys.\  \textbf{ 61}, 659 (2016).
+    \item J.~Weil \textit{et al.},
+          \emph{Particle production and equilibrium properties within a new hadron transport
+                approach for heavy-ion collisions},
+          Phys.\ Rev.\ C \textbf{ 94}, no. 5, 054905 (2016).
+    \item  K.~A.~Bugaev, V.~V.~Sagun, A.~I.~Ivanytskyi, D.~R.~Oliinychenko, E.~M.~Ilgenfritz,
+           E.~G.~Nikonov, A.~V.~Taranenko and G.~M.~Zinovjev,
+           \emph{New Signals of Quark-Gluon-Hadron Mixed Phase Formation},
+           Eur.\ Phys.\ J.\ A \textbf{ 52}, no. 8, 227 (2016).
+    \item H.~Petersen, D.~Oliinychenko, J.~Steinheimer and M.~Bleicher,
+          \emph{Influence of kinematic cuts on the net charge distribution},
+          Quark Matter 2016 proceedings, Nucl.\ Phys.\ A \textbf{ 956}, 336 (2016).
+    \item D.~Oliinychenko and H.~Petersen,
+          \emph{Deviations of the Energy-Momentum Tensor from Equilibrium in the Initial State
+                for Hydrodynamics from Transport Approaches},
+          Phys.\ Rev.\ C \textbf{ 93}, no. 3, 034905 (2016).
+    \item K.~A.~Bugaev, A.~I.~Ivanytskyi, D.~R.~Oliinychenko, V.~V.~Sagun, I.~N.~Mishustin,
+          D.~H.~Rischke, L.~M.~Satarov and G.~M.~Zinovjev,
+          \emph{Thermodynamically Anomalous Regions and Possible New Signals of Mixed Phase
+                Formation},
+          Eur.\ Phys.\ J.\ A \textbf{ 52}, no. 6, 175 (2016).
+    \item D. Oliinychenko, P. Huovinen, H. Petersen,
+          \emph{Systematic Investigation of Negative Cooper-Frye Contributions in Heavy Ion
+                Collisions Using Coarse-grained Molecular Dynamics},
+          Phys. Rev. C \textbf{ 91} (2015) 2, 024906.
+    \item K. A. Bugaev, A. I. Ivanytskyi, D. R. Oliinychenko et al.,
+          \emph{Thermodynamically Anomalous Regions as a Mixed Phase Signal},
+          Phys. Part. Nucl. Lett. \textbf{ 12} (2015) 2, 238-245.
+    \item K. A. Bugaev, A. I. Ivanytskyi, D. R. Oliinychenko et al.,
+          \emph{Non-smooth Chemical Freeze-out and Apparent Width of Wide Resonances and Quark
+                Gluon Bags in a Thermal Environment},
+          Ukr. J. Phys. \textbf{ 60} (2015) 3, 181-200.
+    \item V. V. Sagun, D. R. Oliinychenko, K. A. Bugaev et al.,
+          \emph{Strangeness enhancement at the hadronic chemical freeze-out},
+          Ukr. J. Phys. \textbf{ 59} (2014) 1043-1050.
+    \item D. R. Oliinychenko, V. V. Sagun, A. I. Ivanytskyi, K. A. Bugaev,
+          \emph{Separate chemical freeze-out of strange particles with conservation laws},
+          Ukr. J. Phys. \textbf{ 59} (2014) 1051-1059.
+    \item K. A. Bugaev, D. R. Oliinychenko, et al.,
+    	  \emph{Chemical freeze-out of strange particles and possible root of strangeness
+                suppression},
+          Europhys. Lett., \textbf{ 104} (2013) 22002.
+    \item K. A. Bugaev, D. R. Oliinychenko, A. S. Sorin,
+          \emph{A Scientific Analysis of the Preprint arXiv:1301.1828v1  [nucl-th]},
+          Ukr. J. Phys. \textbf{ 58} (2013) 10, 939-943.
+    \item K. A. Bugaev, A. I. Ivanytskyi, V. V. Sagun and D. R. Oliinychenko,
+          \emph{ Is  bimodality a sufficient condition for a first order phase transition
+                existence?},
+          Phys.  Part. Nucl. Lett. \textbf{ 10} (2013), 6, pp. 832-851.
+    \item K. A. Bugaev, D. R. Oliinychenko, A. S. Sorin, G. M. Zinovjev,
+          \emph{Simple Solution to the Strangeness Horn Description Puzzle},
+	      Eur. Phys. J. A \textbf{ 49} (2013), 30--1-8.
+    \item D.R. Oliinychenko, K.A. Bugaev, A.S. Sorin,
+          \emph{Investigation of hadron multiplicities and hadron yield ratios in heavy ion
+                collisions},
+	      Ukr. J. Phys. \textbf{ 58} (2013), No. 3, 211-227.
+\end{enumerate}
+
+\textbf{Konferenz Proceedings}
+
+\begin{enumerate}
+    \item D.~Oliinychenko and H.~Petersen,
+          \emph{Effective dynamical coupling of hydrodynamics and transport for heavy-ion
+           collisions},
+          J.\ Phys.\ Conf.\ Ser.\  \textbf{ 832}, no. 1, 012052 (2017).
+    \item A.~Ivanytskyi \textit{et al.},
+          \emph{Geometrical clusterization of Polyakjov loops in SU(2) lattice gluodynamics},
+          J.\ Phys.\ Conf.\ Ser.\  \textbf{ 798}, no. 1, 012065 (2017)
+    \item V.~V.~Sagun, K.~A.~Bugaiev, A.~I.~Ivanytskyi, D.~R.~Oliinychenko and I.~N.~Mishustin,
+          \emph{Effects of Induced Surface Tension in Nuclear and Hadron Matter},
+          EPJ Web Conf.\ \textbf{ 137}, 09007 (2017)
+    \item D.~Oliinychenko, H.~Petersen,
+          \emph{Effective dynamical coupling of hydrodynamics and transport for heavy-ion
+                collisions},
+          Hot Quarks 2016, to be published in Journal of Physics: Conference Series (JPCS).
+    \item V.~V.~Sagun, K.~A.~Bugaiev, A.~I.~Ivanytskyi, D.~R.~Oliinychenko and I.~N.~Mishustin,
+          \emph{Effects of Induced Surface Tension in Nuclear and Hadron Matter},
+          XII Quark Confinement and Hadron Spectrum Conference (CONF12), arXiv:1611.07071
+          [nucl-th].
+    \item V.~V.~Sagun, K.~A.~Bugaev, A.~I.~Ivanytskyi and D.~R.~Oliinychenko,
+          \emph{New irregularities at chemical freeze-out of hadrons},
+          2015 International Young Scientists Forum on Applied Physics (YSF),
+          doi:10.1109/YSF.2015.7333191
+    \item K.~A.~Bugaev, A.~I.~Ivanytskyi, V.~V.~Sagun, G.~M.~Zinovjev, D.~R.~Oliinychenko,
+          V.~S.~Trubnikov and E.~G.~Nikonov,
+          \emph{A possible evidence of observation of two mixed phases in nuclear collisions},
+          EPJ Web Conf.\  \textbf{ 126}, 03003 (2016).
+    \item D. Oliinychenko, P. Huovinen, H. Petersen,
+          \emph{Cooper-Frye Negative Contributions in a Coarse-Grained Transport Approach},
+          FAIRNESS 2014, J.\ Phys.\ Conf.\ Ser.\  \textbf{ 599}, no. 1, 012017 (2015).    
+    \item V.~V.~Sagun, A.~I.~Ivanytskyi, D.~R.~Oliinychenko and K.~A.~Bugaev,
+          \emph{Bimodality as a signal of the nuclear liquid-gas phase transition},
+          arXiv:1401.2881 [nucl-th].
+    \item V.~V.~Sagun, A.~I.~Ivanytskyi, K.~A.~Bugaev and D.~R.~Oliinychenko,
+          \emph{Bimodality Phenomenon in Finite and Infinite Systems Within an Exactly Solvable
+          Statistical Model}
+          Helmholtz International Summer School "Physics of Heavy Quarks and Hadrons", Dubna,
+          Russia, July 15-28, 2013;
+          arXiv:1311.7042 [nucl-th].
+    \item V.~V.~Sagun, A.~I.~Ivanytskyi, D.~R.~Oliinychenko and K.~A.~Bugaev,
+	      \emph{Can bimodality exist without phase transition?},
+	      XI International Scientific Conference of Students and Young
+	      Scientists "Shevchenkivska Vesna 2013", Kyiv, March 18-22, 2013;
+	      arXiv:1304.5997 [nucl-th].
+    \item K. A. Bugaev, D. R. Oliinychenko, A. S. Sorin, E.G. Nikonov, G. M. Zinovjev,
+          \emph{Adiabatic chemical freeze-out and wide resonance modification in a thermal
+          medium},
+          {PoS Baldin ISHEPP XXI} (2012) \textbf{ 017}, 1-14; arXiv:1212.0132 [hep-ph].
+\end{enumerate}
+
+\vspace{0.5 cm}
+
+{\Large \textbf{Lehre}} \\
+
+\vspace{0.5 cm}
+
+\begin{tabular}{m{3cm}m{13cm}}
+WS 2016  & Tutorium, Theoretische Physik I \\
+WS 2017  & Tutorium, Theoretische Physik V (Statistische Physik) \\
+\end{tabular}
+
+\end{lebenslauf}
+
+
